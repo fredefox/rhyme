@@ -1,0 +1,41 @@
+name:                rhyme
+version:             0.1.0.0
+github:              "githubuser/ethambda"
+license:             BSD3
+author:              "Frederik Hanghøj Iversen"
+copyright:           "2018 Frederik Hanghøj Iversen"
+
+dependencies:
+- base >= 4.7 && < 5
+- strict
+- containers
+- exceptions
+- haskeline
+- file-embed
+- bytestring
+- text
+- template-haskell
+- string-conversions
+- ansi-wl-pprint
+
+default-extensions:
+  - GADTSyntax
+  - LambdaCase
+  - FlexibleContexts
+  - ConstraintKinds
+  - StandaloneDeriving
+  - UnicodeSyntax
+  - LambdaCase
+  - NamedWildCards
+  - DuplicateRecordFields
+  - ScopedTypeVariables
+  - RankNTypes
+
+executables:
+  rhyme:
+    main:                Main.hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    other-modules: Rhyme
